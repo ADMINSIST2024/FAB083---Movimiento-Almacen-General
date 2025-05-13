@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl_Titulo"
+                android:textSize="20dp"
+                android:text="Nueva etiqueta"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Etiqueta"
+                    android:theme="@style/CustomTextInputLayoutStyle"
+                    app:boxBackgroundMode="outline">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_etiqueta"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:scrollHorizontally="false"
+                        android:overScrollMode="ifContentScrolls"
+                        android:scrollbars="vertical"
+                        android:maxLines="5"
+                        android:textSize="12dp"
+                        android:padding="10dp"
+                        android:inputType="textMultiLine"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Existencia"
+                    android:theme="@style/CustomTextInputLayoutStyle"
+
+                    app:boxBackgroundMode="outline">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txt_existencia"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:scrollHorizontally="false"
+                        android:overScrollMode="ifContentScrolls"
+                        android:scrollbars="vertical"
+                        android:maxLines="5"
+                        android:textSize="12dp"
+                        android:padding="10dp"
+                        android:inputType="textMultiLine"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="U.M."
+                    android:theme="@style/CustomTextInputLayoutStyle"
+                    app:boxBackgroundMode="outline"
+                    android:paddingRight="4dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txt_unidad_medida"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:textSize="12dp"
+                        android:padding="10dp"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="T. Extencia"
+                    android:paddingLeft="4dp"
+                    android:theme="@style/CustomTextInputLayoutStyle"
+                    app:boxBackgroundMode="outline">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txt_tipo_existencia"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:textSize="12dp"
+                        android:padding="10dp"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Stock"
+                    android:theme="@style/CustomTextInputLayoutStyle"
+                    app:boxBackgroundMode="outline"
+                    android:paddingRight="4dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txt_stock"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:textSize="12dp"
+                        android:padding="10dp"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Cantidad"
+                    android:paddingLeft="4dp"
+                    android:theme="@style/CustomTextInputLayoutStyle"
+                    app:boxBackgroundMode="outline">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txt_cantidad"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:textSize="12dp"
+                        android:padding="10dp"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="8dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/side_nav_bar">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SALIDA"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/label_salida_stock"
+                            android:text="KG 12.0"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Cantidad"
+                            android:textColorHint="@color/white"
+                            android:theme="@style/CustomTextInputLayoutStyle"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/text_input_box_stroke_color"
+                            app:hintTextColor="@color/white"
+                            app:helperTextTextColor="@color/white"
+                            app:counterTextColor="@color/white"
+                            app:counterOverflowTextColor="@color/white">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/txt_salida_cantidad"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:inputType="number"
+                                android:digits="0123456789"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btngrabar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Actualizar"
+                    app:backgroundTint="@color/ok"
+                    app:cornerRadius="4dp"
+                    app:icon="@drawable/btnguardar"
+                    app:iconGravity="textStart"
+                    android:layout_weight="1"
+                    app:iconPadding="8dp"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Estilo para el TextInputLayout -->
+    <style name="FormalTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/formal_background</item>
+        <item name="hintTextColor">@color/formal_primary</item>
+        <item name="boxStrokeColor">@color/formal_primary</item>
+        <item name="helperTextTextColor">@color/formal_primary</item>
+        <item name="android:textColorHint">@color/formal_primary</item>
+        <item name="android:textColor">@color/formal_primary</item>
+    </style>
+
+    <!-- Estilo para el AutoCompleteTextView -->
+    <style name="FormalAutoCompleteTextView" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textColor">@color/formal_primary</item>
+        <item name="android:backgroundTint">@color/formal_background</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

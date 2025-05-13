@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="5dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/side_nav_bar"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingVertical="1dp">
+
+            <TextView
+                android:id="@+id/tvMovimiento"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_code"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:text="S- 90938 - 1"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="1dp">
+
+            <TextView
+                android:id="@+id/tvTipoMovimiento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_mover"
+                android:text="S02 - Transferencia por devolucion"
+                android:drawablePadding="5dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:drawableTint="@color/white"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="1dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_ruta"
+                app:tint="@color/white"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Almacen Origen"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundMode="none"
+                    app:hintTextColor="@color/white"
+                    app:helperTextTextColor="@color/white"
+                    android:enabled="false"
+                    app:counterTextColor="@color/white"
+                    app:counterOverflowTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvAlmOrigen"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:text="80 - Pretejeduria"
+                        android:paddingTop="2dp"
+                        android:textSize="18dp"
+                        android:paddingBottom="2dp"
+                        android:textAlignment="center"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Almacen Destino"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundMode="none"
+                    app:hintTextColor="@color/white"
+                    android:enabled="false"
+                    app:helperTextTextColor="@color/white"
+                    app:counterTextColor="@color/white"
+                    app:counterOverflowTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvAlmDestino"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:text="41 - Hilado"
+                        android:textSize="18dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textAlignment="center"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="1dp">
+
+            <TextView
+                android:id="@+id/tvLote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_fabricacion"
+                android:layout_gravity="center"
+                android:text="9-736783-47-245-22"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="1dp">
+
+            <TextView
+                android:id="@+id/tvCantConos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_conos"
+                android:layout_gravity="center"
+                android:text="72 CO"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvPeso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_balanza"
+                android:text="250.00 Kg"
+                android:drawablePadding="5dp"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:textSize="18dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_cinta_doblada"
+                android:layout_gravity="center"
+                android:text="44.05"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:drawableTint="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvUnidadMedReal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_cinta_medida"
+                android:text="NE"
+                android:drawablePadding="5dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

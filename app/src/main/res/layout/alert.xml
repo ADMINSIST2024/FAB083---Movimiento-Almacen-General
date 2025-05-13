@@ -1,0 +1,58 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp">
+
+        <!-- Imagen al lado del título -->
+        <ImageView
+            android:id="@+id/dialog_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/alert"
+            android:contentDescription="Icono del diálogo"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Cabecera del diálogo -->
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensaje"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+    <!-- Texto del cuerpo -->
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Este es el texto que aparecerá en la alerta."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingBottom="20dp"
+        android:layout_gravity="center"/>
+
+    <!-- Botón para cerrar el diálogo -->
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/button_login"/>
+</LinearLayout>

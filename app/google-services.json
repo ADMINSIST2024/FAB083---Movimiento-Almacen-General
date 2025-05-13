@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "370485513181",
+    "project_id": "pruebattsa-1d713",
+    "storage_bucket": "pruebattsa-1d713.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370485513181:android:0de6d8ec369606a9cc8434",
+        "android_client_info": {
+          "package_name": "com.example.fab083"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvSuTuHycEy9OdhT6IJQv_j9Jqg1KveM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

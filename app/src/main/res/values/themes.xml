@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FAB083" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/black</item>
+        <item name="colorSecondaryContainer">#70FF9800</item>
+
+    </style>
+
+    <style name="Theme.FAB083" parent="Base.Theme.FAB083" />
+
+    <style name="Theme.FAB083.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.FAB083.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FAB083.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Custom Toolbar title text appearance -->
+    <style name="CustomToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+         <!-- Cambia el tamaño de la letra aquí -->
+        <item name="android:textColor">@color/white</item> <!-- Cambia el color del texto si lo deseas -->
+    </style>
+</resources>

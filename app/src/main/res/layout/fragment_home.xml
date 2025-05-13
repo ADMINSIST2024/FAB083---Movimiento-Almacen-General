@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEDED"
+    tools:context=".ui.home.AltaFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/side_nav_bar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.695"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/alta"
+            android:contentDescription="Alta" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestionar Alta"
+            android:textColor="#F4F4F4"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
+
+            <ScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:fillViewport="true"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="0dp">
+
+                    <!-- Primer LinearLayout  Tipo de Movimiento -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_background"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TIPO DE OPERACION"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"/>
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/radioButtonSalida"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="60dp"
+                                android:textSize="12sp"
+                                android:text="Salida"
+                                style="@style/Widget.Material3.CompoundButton.RadioButton"/>
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/radioButtonTransferencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:text="Transferencia"
+                                android:enabled="false"
+                                android:theme="@style/Widget.Material3.CompoundButton.RadioButton"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <!-- Segundo LinearLayout con sus componentes -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_background"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp">
+                        <!--<com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione Compañia:"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="0dp"
+                            />-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/compania_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:hint="Compañia">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/almacenOrigen_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:hint="Almacen">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/ddlAlmacenOrigen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/textViewCodigoAlmacen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textSize="8dp"/>
+
+                        <TextView
+                            android:id="@+id/textViewNombreAlmacen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textSize="8dp"/>
+                        <TextView
+                            android:id="@+id/textViewRequiereNroOrden"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textSize="8dp"/>
+
+                        <TextView
+                            android:id="@+id/textViewRequiereCscOrden"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textSize="8dp"/>
+                        <TextView
+                            android:id="@+id/textViewtipoDocumento"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textSize="8dp"/>
+
+                        <TextView
+                            android:id="@+id/textVierequiereNroCarga"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textSize="8dp"/>
+
+                        <TextView
+                            android:id="@+id/textVierecentroCosto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textSize="8dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Tercer LinearLayout con otros componentes -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_background"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp">
+
+                        <!--<com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textTituloInputAlmacenDestino"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione Almacen Destino:"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="0dp"
+                            />-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/almacenDestino_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:hint="Almacen Destino">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/dllAlmacenDestino"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--<com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione Tipo:"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"/>-->
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tipo_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tipo de Movimiento"
+                            android:layout_marginBottom="8dp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/ddlTipo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--<com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione Centro de Costo:"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"
+                            />-->
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/centroCosto_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:hint="Centro de Costo">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/ddlCentroCosto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!-- Cuarto LinearLayout con texview -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/rounded_background"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <!-- TextView para el texto -->
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="Datos de la Orden:"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_weight="9"
+                                android:gravity="center_vertical"/>
+
+                            <!-- ImageView para la imagen a la derecha -->
+                            <ImageView
+                                android:id="@+id/txtcancelar"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:src="@drawable/delete"
+                                android:onClick="onImageClick"
+                                android:layout_marginEnd="8dp"
+                                android:layout_gravity="center" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginVertical="8dp"> <!-- Agrega un margen superior para separar los grupos de TextInputLayout -->
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/layoutnroorden"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:enabled="false"
+                                android:hint="Orden">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtnroorden"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <TextView
+                                android:id="@+id/txtproceso"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/txtnrocargamaximo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:textSize="12dp"/>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/layoutconsecutivo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="true"
+                                android:hint="Consecutivo">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtconsecutivo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="true"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/layoutnrocarga"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:hint="Carga">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtnrocarga"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"
+
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"> <!-- Define el peso total de los hijos -->
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TextInputLayoutTipo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:hint="Tipo"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/textInputEditTextTipo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="false"
+                                    android:background="@drawable/background_disabled"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+
+                                android:hint="Año">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtanio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="false"
+                                    android:background="@drawable/background_disabled"
+
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:hint="Articulo"
+                            android:layout_marginVertical="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtarticulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:enabled="false"
+                                android:textStyle="bold"
+                                android:background="@drawable/background_disabled"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Movimiento anteriores"
+                                android:textSize="15dp"
+                                android:textAlignment="textEnd"
+                                android:visibility="gone"
+                                android:drawableRight="@drawable/ic_right"
+                                style="@style/Widget.Material3.Button.TextButton"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Quinto LinearLayout con otros componentes -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_background"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:visibility="gone">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccione tipo de movimiento:"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"
+                            />
+                        <RadioGroup
+                            android:id="@+id/radioGroupDescargue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:weightSum="3">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Descargue"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/rbTotal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:text="Total"
+                                style="@style/Widget.Material3.CompoundButton.RadioButton" />
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/rbParcial"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:text="Parcial"
+
+                                android:theme="@style/Widget.Material3.CompoundButton.RadioButton" />
+
+                        </RadioGroup>
+                        <RadioGroup
+                            android:id="@+id/radioGroupUMedida"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:weightSum="3">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="U.Medida"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/rbProducto"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:text="Producto"
+                                style="@style/Widget.Material3.CompoundButton.RadioButton" />
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/rbEnvace"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:text="Envace"
+
+                                android:theme="@style/Widget.Material3.CompoundButton.RadioButton" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_background"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:gravity="left"
+                            > <!-- Define el peso total de los hijos -->
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TextInputLayoutFecha"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_marginEnd="8dp"
+                                android:hint="Fecha de Operacion"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TextInputEditTextFecha"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:clickable="true"
+                                    android:inputType="none"
+                                    android:textSize="12dp"
+
+
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ingrese Codigo:"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="0dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1"> <!-- Define el peso total de los hijos -->
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TextInputLayoutCodigo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                app:endIconMode="custom"
+                                app:endIconDrawable="@drawable/qrfinal"
+                                android:hint="Codigo"
+                                app:endIconTint="@null">
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TextInputEditTextCodigo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:textSize="12dp"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="text"
+
+                                    />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TextInputLayoutNota"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                android:hint="Nota">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TextInputEditTextNota"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="false"
+                                    android:background="@drawable/background_disabled"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="8dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/txtSeleccionados"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingRight="8dp"
+                                android:hint="T. Etiquetas">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TextInputEditTextSeleccionados"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="false"
+                                    android:background="@drawable/background_disabled"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingRight="8dp"
+                                android:hint="T. Conos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtTotalConos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="false"
+                                    android:background="@drawable/background_disabled"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="T. Kg">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtTotalKg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:enabled="false"
+                                    android:background="@drawable/background_disabled"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintHeight_max="450dp"
+                            app:layout_constraintWidth_default="spread"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/contactListId"
+                                android:layout_width="match_parent"
+                                android:layout_margin="10sp"
+                                android:layout_height="match_parent"/>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutLoading"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgLoading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_weight="3"
+                        app:cornerRadius="4dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="Cargando etiquetas"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnguardar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Guardar"
+                    app:backgroundTint="@color/button_login"
+                    android:visibility="visible"
+                    app:cornerRadius="4dp"
+                    app:icon="@drawable/btnguardar"
+                    app:iconGravity="textStart"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnborrartodo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Borrar"
+                    app:backgroundTint="#D8E30808"
+                    app:cornerRadius="4dp"
+                    app:icon="@drawable/delete"
+                    app:iconGravity="textStart"
+                    android:layout_weight="1"
+                    app:iconPadding="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="83dp"
+        android:layout_height="71dp"
+
+        android:indeterminate="false"
+        android:indeterminateTint="#2D84B8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

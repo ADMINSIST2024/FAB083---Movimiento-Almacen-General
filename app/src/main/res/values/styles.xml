@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estilo para diálogos transparentes -->
+    <style name="TransparentDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="CustomTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#FFFFFF</item> <!-- Contorno blanco -->
+        <item name="hintTextColor">@color/white</item> <!-- Hint blanco -->
+        <item name="android:textColor">@color/white</item> <!-- Texto blanco -->
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F7F7"
+    tools:context=".MainActivityLogin">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/fond1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="85dp"
+                android:layout_height="83dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logtec" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/myGifImageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="-28dp"
+                android:src="@drawable/segurigif" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="-30dp"
+                android:text="Login"
+
+            android:shadowRadius="3"
+            android:textColor="#0D5586"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="-1dp"
+                android:layout_marginBottom="10dp"
+                android:text="Ingrese sus credenciales:"
+                android:textColor="#B3AEAE"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/editTextUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/user"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="textPersonName|textCapCharacters"
+                android:padding="8dp"
+                android:textColor="#070707"
+                android:textColorHint="#B3AEAE"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/editTextClave"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/clave"
+                android:drawableEnd="@drawable/invisible"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Clave"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="#050505"
+                android:textColorHint="#B3AEAE" />
+            <CheckBox
+                android:id="@+id/chkrecordar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="Recordar"
+                android:layout_centerVertical="true"
+                android:alpha="0.7"/>
+
+            <ImageView
+                android:id="@+id/btnlogin"
+                android:layout_width="110dp"
+                android:layout_height="83dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/btn_login" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Aquí va el contenido del NavigationView (botones, elementos del menú, etc.) -->
+        <!-- Este espacio es automáticamente ocupado por el menú de navegación. -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <!-- Aquí irían los elementos del menú (menu items, por ejemplo) -->
+        </FrameLayout>
+
+        <!-- Footer personalizado para la versión -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Aquí puedes agregar un TextView para mostrar la versión -->
+            <TextView
+                android:id="@+id/versionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versión: "
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    android:elevation="4dp">
+
+    <!-- TextView: Título de confirmación de fecha -->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar si la fecha es correcta."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp" />
+
+    <!-- EditText para la fecha, con un mejor diseño -->
+    <EditText
+        android:id="@+id/edit_text_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecciona una fecha"
+        android:inputType="date"
+        android:focusable="false"
+        android:drawableEnd="@drawable/calendario"
+
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#005586</color>
+    <color name="purple_500">#005586</color>
+    <color name="purple_700">#00518F</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="my_primary">#FFFFFF</color>
+    <color name="my_secondary">#848385</color>
+    <color name="button_login">#E2FD9701</color>
+    <color name="transparent">#48FFFFFF</color>
+    <color name="ok">#008f39</color>
+
+    <!-- Definición de colores personalizados -->
+    <color name="formal_primary">#000000</color> <!-- Negro -->
+    <color name="formal_accent">#FFFFFF</color> <!-- Blanco -->
+    <color name="formal_background">#F5F5F5</color> <!-- Gris claro -->
+
+    <color name="card_gray">#0277BD</color>
+
+</resources>
